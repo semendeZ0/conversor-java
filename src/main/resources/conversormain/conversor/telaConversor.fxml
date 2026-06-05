@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="16.0" styleClass="container" stylesheets="@style.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="conversormain.conversor.Controller">
+
+    <padding>
+        <Insets bottom="28.0" left="24.0" right="24.0" top="28.0" />
+    </padding>
+
+    <!-- Título -->
+    <Label styleClass="titulo" text="[ CONVERSOR ]" />
+    <Label styleClass="subtitulo" text="dev respawn v1.0" />
+
+    <!-- Separador pixel -->
+    <Region maxWidth="1.7976931348623157E308" prefHeight="2.0" styleClass="separator" />
+
+    <!-- ComboBox de opções -->
+    <ComboBox fx:id="opcoesConvert" maxWidth="1.7976931348623157E308" onAction="#mudarConversao" prefHeight="43.0" prefWidth="324.0" promptText="&gt; ESCOLHA A CONVERSAO" />
+
+    <!-- Campo de entrada -->
+    <TextField fx:id="valorConverter" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefHeight="4.0" prefWidth="324.0" promptText="0.0" />
+
+    <!-- Separador pixel -->
+    <Region maxWidth="1.7976931348623157E308" prefHeight="2.0" styleClass="separator" />
+
+    <!-- Botão -->
+    <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#resultado" styleClass="btn-converter" text="&gt;&gt; CONVERTER" />
+
+    <!-- Label de erro/resultado -->
+    <Label fx:id="errorLabel" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="17.0" prefWidth="324.0" styleClass="error-label" />
+
+</VBox>

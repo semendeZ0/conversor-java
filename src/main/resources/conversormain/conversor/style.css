@@ -1,0 +1,178 @@
+/* =============================================
+   Dev Respawn — Conversor de Temperatura
+   Pixel Art Theme | JDK 17 / JavaFX
+   ============================================= */
+
+/* ---------- Fonte pixel ---------- */
+@font-face {
+    font-family: 'Press Start 2P';
+    src: url('font/PressStart2P-Regular.ttf') format('truetype');
+}
+
+/* ---------- Root / Janela ---------- */
+.root {
+    -fx-background-color: #1B1873;
+    -fx-font-family: 'Press Start 2P', monospace;
+}
+
+/* ---------- Container principal (VBox) ---------- */
+.container {
+    -fx-background-color: #262325;
+    -fx-background-radius: 0;
+    -fx-border-color: #4E1BC4;
+    -fx-border-width: 4;
+    -fx-border-radius: 0;
+    -fx-effect: dropshadow(block, #4E1BC4, 8, 0, 4, 4);
+    -fx-pref-width: 380px;
+    -fx-min-width: 340px;
+    -fx-pref-height: 420px;
+    -fx-min-height: 380px;
+}
+
+/* ---------- Título ---------- */
+.titulo {
+    -fx-text-fill: #FAFFF2;
+    -fx-font-family: 'Press Start 2P', monospace;
+    -fx-font-size: 10px;
+    -fx-alignment: center;
+}
+
+.subtitulo {
+    -fx-text-fill: #4E1BC4;
+    -fx-font-family: 'Press Start 2P', monospace;
+    -fx-font-size: 7px;
+    -fx-alignment: center;
+}
+
+/* ---------- ComboBox ---------- */
+.combo-box {
+    -fx-pref-width: 332px;
+    -fx-background-color: #1B1873;
+    -fx-border-color: #4E1BC4;
+    -fx-border-width: 2;
+    -fx-border-radius: 2;
+    -fx-background-radius: 0;
+    -fx-text-fill: #FAFFF2;
+    -fx-font-family: 'Press Start 2P', monospace;
+    -fx-font-size: 20px;
+    -fx-cursor: hand;
+}
+
+.combo-box:hover {
+    -fx-border-color: #FAFFF2;
+}
+
+.combo-box:focused {
+    -fx-border-color: #FAFFF2;
+    -fx-effect: dropshadow(block, #4E1BC4, 4, 0, 2, 2);
+}
+
+.combo-box .list-cell {
+    -fx-background-color: #1B1873;
+    -fx-text-fill: #FAFFF2;
+    -fx-font-family: 'Press Start 2P', monospace;
+    -fx-font-size: 7px;
+    -fx-padding: 6 8 6 8;
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: #1B1873;
+    -fx-border-color: #4E1BC4;
+    -fx-border-width: 2;
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+}
+
+.combo-box-popup .list-view .list-cell:hover {
+    -fx-background-color: #4E1BC4;
+    -fx-text-fill: #FAFFF2;
+}
+
+.combo-box-popup .list-view .list-cell:selected {
+    -fx-background-color: #4E1BC4;
+    -fx-text-fill: #FAFFF2;
+}
+
+.combo-box .arrow-button {
+    -fx-background-color: #4E1BC4;
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+    -fx-padding: 0 6 0 6;
+}
+
+.combo-box .arrow {
+    -fx-background-color: #FAFFF2;
+}
+
+/* ---------- TextField ---------- */
+.text-field {
+    -fx-pref-height: 60px;
+    -fx-min-height: 60px;
+    -fx-background-color: #1B1873;
+    -fx-border-color: #4E1BC4;
+    -fx-border-width: 2;
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+    -fx-text-fill: #FAFFF2;
+    -fx-prompt-text-fill: #4E1BC4;
+    -fx-font-family: 'Press Start 2P', monospace;
+    -fx-font-size: 10px;
+    -fx-alignment: center;
+    -fx-padding: 8 12 8 12;
+}
+
+.text-field:focused {
+    -fx-border-color: #FAFFF2;
+    -fx-effect: dropshadow(block, #4E1BC4, 4, 0, 2, 2);
+}
+
+.text-field:hover {
+    -fx-border-color: #FAFFF2;
+}
+
+/* ---------- Botão converter ---------- */
+.btn-converter {
+    -fx-background-color: #4E1BC4;
+    -fx-text-fill: #FAFFF2;
+    -fx-font-family: 'Press Start 2P', monospace;
+    -fx-font-size: 9px;
+    -fx-border-color: #FAFFF2;
+    -fx-border-width: 2;
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+    -fx-cursor: hand;
+    -fx-padding: 10 20 10 20;
+}
+
+.btn-converter:hover {
+    -fx-background-color: #1B1873;
+    -fx-border-color: #4E1BC4;
+    -fx-effect: dropshadow(block, #FAFFF2, 4, 0, 2, 2);
+}
+
+.btn-converter:pressed {
+    -fx-translate-x: 2;
+    -fx-translate-y: 2;
+    -fx-effect: dropshadow(block, #4E1BC4, 2, 0, 1, 1);
+}
+
+/* ---------- Label de erro ---------- */
+.error-label {
+    -fx-background-color: transparent;
+    -fx-text-fill: #FF4444;
+    -fx-font-family: 'Press Start 2P', monospace;
+    -fx-font-size: 10px;
+    -fx-alignment: center;
+    -fx-wrap-text: true;
+}
+
+.error-label:empty {
+    -fx-opacity: 0;
+}
+
+/* ---------- Separador pixel ---------- */
+.separator {
+    -fx-background-color: #4E1BC4;
+    -fx-pref-height: 2;
+    -fx-opacity: 0.5;
+}
