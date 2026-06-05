@@ -10,7 +10,7 @@ Aplicação desktop desenvolvida em **JavaFX** como projeto de estudo, explorand
 
 ### 📸 Preview
 
-> _Adicione um screenshot da aplicação aqui_
+![Conversor de Temperatura](https://raw.githubusercontent.com/semendeZ0/conversor-java/main/preview.png)
 
 ### 🚀 Funcionalidades
 
@@ -34,7 +34,7 @@ Aplicação desktop desenvolvida em **JavaFX** como projeto de estudo, explorand
 
 ```bash
 # Clone o repositório
-git clone https://github.com/semendeZ0/conversor-temperatura
+git clone https://github.com/semendeZ0/conversor-java
 
 # Abra no IntelliJ IDEA e execute a classe MainApplication
 ```
@@ -81,7 +81,7 @@ A desktop application built with **JavaFX** as a study project, exploring GUI co
 
 ### 📸 Preview
 
-> _Add a screenshot of the application here_
+![Temperature Converter](https://raw.githubusercontent.com/semendeZ0/conversor-java/main/preview.png)
 
 ### 🚀 Features
 
@@ -105,7 +105,7 @@ A desktop application built with **JavaFX** as a study project, exploring GUI co
 
 ```bash
 # Clone the repository
-git clone https://github.com/semendeZ0/conversor-temperatura
+git clone https://github.com/semendeZ0/conversor-java
 
 # Open in IntelliJ IDEA and run the MainApplication class
 ```
