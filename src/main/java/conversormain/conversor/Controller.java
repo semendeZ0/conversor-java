@@ -52,7 +52,6 @@ public class Controller {
             errorLabel.setText("Escolha uma conversão!");
         }
 
-
         try{
             assert valorTexto != null;
             valor = Double.parseDouble(valorTexto);
