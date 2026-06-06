@@ -24,7 +24,9 @@ public class Controller {
 
     ObservableList<String> listaDeOpcoes = FXCollections.observableArrayList(
             "Graus - Fahrenheit",
-            "Fahrenheit - Graus"
+            "Fahrenheit - Graus",
+            "KM - Metros",
+            "Metros - KM"
     );
 
 
@@ -52,24 +54,34 @@ public class Controller {
 
 
         try{
+            assert valorTexto != null;
             valor = Double.parseDouble(valorTexto);
         } catch (Exception e){
             errorLabel.setText("Apenas números!");
             return;
         }
 
-
-
         switch (conversao){
             case "Graus - Fahrenheit":
                 resultado = (valor * 1.8) + 32;
-                valorConverter.setText(resultado + " Fº");
+                valorConverter.setText(String.format("%.2f Fº", resultado));
                 break;
 
             case "Fahrenheit - Graus":
                 resultado = (valor - 32) / 1.8;
-                valorConverter.setText(resultado + " Cº");
+                valorConverter.setText(String.format("%.2f Cº", resultado));
                 break;
+
+            case "KM - Metros":
+                resultado = valor * 1000;
+                valorConverter.setText(String.format("%.2f M", resultado));
+                break;
+
+            case "Metros - KM":
+                resultado = valor / 1000;
+                valorConverter.setText(String.format("%.2f KM", resultado));
+                break;
+
 
             default:
                 valorConverter.setText("ERROR");
